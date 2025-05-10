@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    function editData(id) {
+        $.ajax({
+            url: "{{ url('/app/dashboard/administrator') }}" + "/" + id + "/edit",
+            type: "GET",
+            success: function (response) {
+                $("#modal-content-edit").html(response)
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
